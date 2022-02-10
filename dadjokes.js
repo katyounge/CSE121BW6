@@ -79,9 +79,19 @@ function clickHandler() {
     
 } 
 
-// this connects the button actions to the button element in the HTML
+
+// this connects the name button actions to the button element in the HTML
 buttonElement = document.querySelector("#submitName"); 
 buttonElement.addEventListener("click", clickHandler);
+
+// this connects the self destruct button actions to the button element in the HTML
+buttonElement = document.querySelector("#selfDestruct"); 
+buttonElement.addEventListener("click", selfDestruct);
+
+// This creates the functionality for the self-destruct button
+function selfDestruct() {
+    document.querySelector("#wholePage").innerHTML = ""
+}
 
 // this resets the page and then prints out the joke on the screen with a personalized message
 function setJokeText(chosenMessage, chosenJoke){
